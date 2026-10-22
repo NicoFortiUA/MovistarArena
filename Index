@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primera App en GitHub</title>
+    <style>
+        /* Estilos básicos para que se vea moderno */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+        }
+        button {
+            background-color: #24292e; /* Color estilo GitHub */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #2c3137;
+        }
+        p {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>¡Hola Mundo! 🚀</h1>
+        <p>Esta es una plantilla básica ejecutándose desde un archivo HTML.</p>
+        <button id="btnContador">Hacé clic acá</button>
+        <p id="mensaje">Clics: <span id="contador">0</span></p>
+    </div>
+
+    <script>
+        // Lógica simple en JavaScript para el botón
+        let clics = 0;
+        const boton = document.getElementById('btnContador');
+        const contadorTexto = document.getElementById('contador');
+
+        boton.addEventListener('click', () => {
+            clics++;
+            contadorTexto.textContent = clics;
+        });
+    </script>
+</body>
+</html>
